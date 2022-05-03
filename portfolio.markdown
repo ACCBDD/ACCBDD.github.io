@@ -25,7 +25,9 @@ Player cards - $2 each, depending on complexity. Bulk discounts are available, i
 ![Overlay](/streamer.gif)
 ![Transition](/stinger.gif)
 
-Custom branded stream overlays and transitions - $10+ depending on complexity and how many different kinds of overlays are needed. Includes finished products in appropriate sizes and formats.
+Custom branded stream overlays and transitions - $10+ depending on complexity and how many different kinds of overlays are needed. Includes finished products in appropriate sizes and formats.  
+
+Other than the above formats, I'm pretty flexible! If you're looking for something that isn't up there, shoot me a quick email or DM on one of my contacts and we can talk about what you have in mind. Posters, fliers, newsletters, t-shirts, I've done most things that there are to do and we can definitely brainstorm to find what works best for you.
 
 
 # 3D
