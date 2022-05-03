@@ -5,3 +5,4 @@
 layout: main
 title: Home
 ---
+I'm not really sure what to put here! Click one of the above links to check out my portfolio or a little bit about me as a person. :)
