@@ -5,4 +5,4 @@
 layout: main
 title: Home
 ---
-I'm not really sure what to put here! Click one of the above links to check out my portfolio or a little bit about me as a person. :)
+Welcome to my website post-domain name loss (and all of my old data! oh no!) I'm not really sure what to put here! Click one of the above links to check out my portfolio or a little bit about me as a person. :)
