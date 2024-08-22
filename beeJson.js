@@ -57,5 +57,10 @@ function generateJson() {
         dominant: form['weather_dom'].checked
     }
     console.log(JSON.stringify(object))
-    console.log(form.fertility.value)
+    console.log(document.getElementById('output'))
+    document.getElementById('output').value = JSON.stringify(object, null, 2)
+}
+
+function syncColor() {
+    document.getElementById('nest_color').value = document.getElementById('color').value
 }

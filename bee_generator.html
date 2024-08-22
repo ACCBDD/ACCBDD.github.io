@@ -4,187 +4,201 @@
     <title>Bee Generator</title>
 </head>
 <body>
-    <form name="bee_form" id="bee_form">
-        <input type="checkbox" id="dominant" name="dominant" value="dominant" checked>
-        <label for="dominant">Dominant</label><br>
-        <label for="color">Color:</label>
-        <input type="color" id="color" name="color"><br>
-        <label for="nest_color">Nest Color</label>
-        <input type="color" id="nest_color" name="nest_color"><br>
-        <table>
-            <tr>
-                <td>
-                    <label for="temp">Temperature:</label>
-                    <select id="temp" name="temp">
-                        <option value="frozen">Frozen</option>
-                        <option value="icy">Icy</option>
-                        <option value="cold">Cold</option>
-                        <option value="normal" selected>Normal</option>
-                        <option value="warm">Warm</option>
-                        <option value="hot">Hot</option>
-                        <option value="hellish">Hellish</option>
-                    </select>
-                </td>
-                <td>
-                    <label for="temp_tol">Tolerance:</label>
-                    <select id="temp_tol" name="temp_tol">
-                        <option value="none">none</option>
-                        <option value="both_1">both 1</option>
-                        <option value="both_2">both 2</option>
-                        <option value="both_3">both 3</option>
-                        <option value="both_4">both 4</option>
-                        <option value="both_5">both 5</option>
-                        <option value="down_1">down 1</option>
-                        <option value="down_2">down 2</option>
-                        <option value="down_3">down 3</option>
-                        <option value="down_4">down 4</option>
-                        <option value="down_5">down 5</option>
-                        <option value="up_1">up 1</option>
-                        <option value="up_2">up 2</option>
-                        <option value="up_3">up 3</option>
-                        <option value="up_4">up 4</option>
-                        <option value="up_5">up 5</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="checkbox" id="temp_dom" name="temp_dom" value="temp_dom" checked>
-                    <label for="temp_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="humid">Humidity:</label>
-                    <select id="humid" name="humid">
-                        <option value="dry">Dry</option>
-                        <option value="normal" selected>Normal</option>
-                        <option value="wet">Wet</option>
-                    </select>
-                </td>
-                <td>
-                    <label for="humid_tol">Tolerance:</label>
-                    <select id="humid_tol" name="humid_tol">
-                        <option value="none">none</option>
-                        <option value="both_1">both 1</option>
-                        <option value="both_2">both 2</option>
-                        <option value="both_3">both 3</option>
-                        <option value="both_4">both 4</option>
-                        <option value="both_5">both 5</option>
-                        <option value="down_1">down 1</option>
-                        <option value="down_2">down 2</option>
-                        <option value="down_3">down 3</option>
-                        <option value="down_4">down 4</option>
-                        <option value="down_5">down 5</option>
-                        <option value="up_1">up 1</option>
-                        <option value="up_2">up 2</option>
-                        <option value="up_3">up 3</option>
-                        <option value="up_4">up 4</option>
-                        <option value="up_5">up 5</option>
-                    </select>
-                </td>
-                <td>
-                    <input type="checkbox" id="humid_dom" name="humid_dom" value="humid_dom" checked>
-                    <label for="humid_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <label for="lifespan">Lifespan:</label>
-                    <select id="lifespan" name="lifespan">
-                        <option value="shortest">shortest</option>
-                        <option value="shorter">shorter</option>
-                        <option value="short">short</option>
-                        <option value="average">average</option>
-                        <option value="long">long</option>
-                        <option value="longer">longer</option>
-                        <option value="longest">longest</option>
-                    </select><br>
-                </td>
-                <td>
-                    <input type="checkbox" id="life_dom" name="life_dom" value="life_dom" checked>
-                    <label for="life_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <label for="productivity">Productivity:</label>
-                    <select id="productivity" name="productivity">
-                        <option value="slowest">slowest</option>
-                        <option value="slower">slower</option>
-                        <option value="slow">slow</option>
-                        <option value="average">average</option>
-                        <option value="fast">fast</option>
-                        <option value="faster">faster</option>
-                        <option value="fastest">fastest</option>
-                    </select><br>
-                </td>
-                <td>
-                    <input type="checkbox" id="prod_dom" name="prod_dom" value="prod_dom" checked>
-                    <label for="prod_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <label for="fertility">Fertility</label>
-                    <input type="number" id="fertility" name="fertility" min="0" max="10" value="2"><br>
-                </td>
-                <td>
-                    <input type="checkbox" id="fertile_dom" name="fertile_dom" value="fertile_dom" checked>
-                    <label for="fertile_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <label for="flower">Flower:</label>
-                    <input type="text" id="flower" name="flower"><br>
-                </td>
-                <td>
-                    <input type="checkbox" id="flower_dom" name="flower_dom" value="flower_dom" checked>
-                    <label for="flower_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <label for="effect">Effect:</label>
-                    <input type="text" id="effect" name="effect"><br>
-                </td>
-                <td>
-                    <input type="checkbox" id="effect_dom" name="effect_dom" value="effect_dom" checked>
-                    <label for="effect_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="checkbox" id="nocturnal" name="nocturnal" value="nocturnal">
-                    <label for="nocturnal">Nocturnal</label><br>
-                </td>
-                <td>
-                    <input type="checkbox" id="nocturnal_dom" name="nocturnal_dom" value="nocturnal_dom" checked>
-                    <label for="nocturnal_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="checkbox" id="cave_dwelling" name="cave_dwelling" value="cave_dwelling">
-                    <label for="cave_dwelling">Cave Dwelling</label><br>
-                </td>
-                <td>
-                    <input type="checkbox" id="cave_dom" name="cave_dom" value="cave_dom" checked>
-                    <label for="cave_dom">Dominant</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="checkbox" id="weatherproof" name="weatherproof" value="weatherproof">
-                    <label for="weatherproof">Weatherproof</label><br>
-                </td>
-                <td>
-                    <input type="checkbox" id="weather_dom" name="weather_dom" value="weather_dom" checked>
-                    <label for="weather_dom">Dominant</label><br>
-                </td>
-            </tr>
-        </table>
-    </form>
-    <button onclick="generateJson()">Generate</button>
+    <table style="padding:10px">
+        <tr>
+            <td style="vertical-align:top">
+                <form name="bee_form" id="bee_form">
+                    <input type="checkbox" id="dominant" name="dominant" value="dominant" checked>
+                    <label for="dominant">Dominant</label><br>
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color" onchange="syncColor()"><br>
+                    <label for="nest_color">Nest Color</label>
+                    <input type="color" id="nest_color" name="nest_color"><br>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="temp">Temperature:</label>
+                                <select id="temp" name="temp">
+                                    <option value="frozen">Frozen</option>
+                                    <option value="icy">Icy</option>
+                                    <option value="cold">Cold</option>
+                                    <option value="normal" selected>Normal</option>
+                                    <option value="warm">Warm</option>
+                                    <option value="hot">Hot</option>
+                                    <option value="hellish">Hellish</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label for="temp_tol">Tolerance:</label>
+                                <select id="temp_tol" name="temp_tol">
+                                    <option value="none">none</option>
+                                    <option value="both_1">both 1</option>
+                                    <option value="both_2">both 2</option>
+                                    <option value="both_3">both 3</option>
+                                    <option value="both_4">both 4</option>
+                                    <option value="both_5">both 5</option>
+                                    <option value="down_1">down 1</option>
+                                    <option value="down_2">down 2</option>
+                                    <option value="down_3">down 3</option>
+                                    <option value="down_4">down 4</option>
+                                    <option value="down_5">down 5</option>
+                                    <option value="up_1">up 1</option>
+                                    <option value="up_2">up 2</option>
+                                    <option value="up_3">up 3</option>
+                                    <option value="up_4">up 4</option>
+                                    <option value="up_5">up 5</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="temp_dom" name="temp_dom" value="temp_dom" checked>
+                                <label for="temp_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="humid">Humidity:</label>
+                                <select id="humid" name="humid">
+                                    <option value="dry">Dry</option>
+                                    <option value="normal" selected>Normal</option>
+                                    <option value="wet">Wet</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label for="humid_tol">Tolerance:</label>
+                                <select id="humid_tol" name="humid_tol">
+                                    <option value="none">none</option>
+                                    <option value="both_1">both 1</option>
+                                    <option value="both_2">both 2</option>
+                                    <option value="both_3">both 3</option>
+                                    <option value="both_4">both 4</option>
+                                    <option value="both_5">both 5</option>
+                                    <option value="down_1">down 1</option>
+                                    <option value="down_2">down 2</option>
+                                    <option value="down_3">down 3</option>
+                                    <option value="down_4">down 4</option>
+                                    <option value="down_5">down 5</option>
+                                    <option value="up_1">up 1</option>
+                                    <option value="up_2">up 2</option>
+                                    <option value="up_3">up 3</option>
+                                    <option value="up_4">up 4</option>
+                                    <option value="up_5">up 5</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="humid_dom" name="humid_dom" value="humid_dom" checked>
+                                <label for="humid_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="lifespan">Lifespan:</label>
+                                <select id="lifespan" name="lifespan">
+                                    <option value="shortest">shortest</option>
+                                    <option value="shorter">shorter</option>
+                                    <option value="short">short</option>
+                                    <option value="average">average</option>
+                                    <option value="long">long</option>
+                                    <option value="longer">longer</option>
+                                    <option value="longest">longest</option>
+                                </select><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="life_dom" name="life_dom" value="life_dom" checked>
+                                <label for="life_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="productivity">Productivity:</label>
+                                <select id="productivity" name="productivity">
+                                    <option value="slowest">slowest</option>
+                                    <option value="slower">slower</option>
+                                    <option value="slow">slow</option>
+                                    <option value="average">average</option>
+                                    <option value="fast">fast</option>
+                                    <option value="faster">faster</option>
+                                    <option value="fastest">fastest</option>
+                                </select><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="prod_dom" name="prod_dom" value="prod_dom" checked>
+                                <label for="prod_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="fertility">Fertility</label>
+                                <input type="number" id="fertility" name="fertility" min="0" max="10" value="2"><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="fertile_dom" name="fertile_dom" value="fertile_dom" checked>
+                                <label for="fertile_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="flower">Flower:</label>
+                                <input type="text" id="flower" name="flower"><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="flower_dom" name="flower_dom" value="flower_dom" checked>
+                                <label for="flower_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="effect">Effect:</label>
+                                <input type="text" id="effect" name="effect"><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="effect_dom" name="effect_dom" value="effect_dom" checked>
+                                <label for="effect_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="checkbox" id="nocturnal" name="nocturnal" value="nocturnal">
+                                <label for="nocturnal">Nocturnal</label><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="nocturnal_dom" name="nocturnal_dom" value="nocturnal_dom" checked>
+                                <label for="nocturnal_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="checkbox" id="cave_dwelling" name="cave_dwelling" value="cave_dwelling">
+                                <label for="cave_dwelling">Cave Dwelling</label><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="cave_dom" name="cave_dom" value="cave_dom" checked>
+                                <label for="cave_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="checkbox" id="weatherproof" name="weatherproof" value="weatherproof">
+                                <label for="weatherproof">Weatherproof</label><br>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="weather_dom" name="weather_dom" value="weather_dom" checked>
+                                <label for="weather_dom">Dominant</label><br>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                </form>
+                <button onclick="generateJson()">Generate</button>
+            </td>
+            <td>
+                <label>
+                    Output:<br>
+                    <textarea id="output" rows="50" cols="70"></textarea>
+                </label>
+            </td>
+        </tr>
+    </table>
     <script src="beeJson.js">
     </script>
 </body>
