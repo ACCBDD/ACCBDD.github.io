@@ -59,8 +59,23 @@ function generateJson() {
     console.log(JSON.stringify(object))
     console.log(document.getElementById('output'))
     document.getElementById('output').value = JSON.stringify(object, null, 2)
+    var speciesName = form.name.value.toLowerCase()
+    var namespace = form.namespace.value
+    if (namespace == "") namespace = "complicated_bees"
+    lang = {}
+    lang['species.complicated_bees.' + namespace + ':' + speciesName] = capitalize(speciesName)
+    lang['species.complicated_bees.' + namespace + ':' + speciesName + '.genus'] = ""
+    lang['species.complicated_bees.' + namespace + ':' + speciesName + '.species_taxonomy'] = ""
+    lang['species.complicated_bees.' + namespace + ':' + speciesName + '.authority'] = ""
+    lang['species.complicated_bees.' + namespace + ':' + speciesName + '.flavor_text'] = ""
+    lang['species.complicated_bees.' + namespace + ':' + speciesName + '.flavor_author'] = ""
+    document.getElementById('lang_output').value = JSON.stringify(lang, null, 2)
 }
 
 function syncColor() {
     document.getElementById('nest_color').value = document.getElementById('color').value
+}
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
 }

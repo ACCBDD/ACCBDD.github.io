@@ -8,13 +8,35 @@
         <tr>
             <td style="vertical-align:top">
                 <form name="bee_form" id="bee_form">
-                    <input type="checkbox" id="dominant" name="dominant" value="dominant" checked>
-                    <label for="dominant">Dominant</label><br>
-                    <label for="color">Color:</label>
-                    <input type="color" id="color" name="color" onchange="syncColor()"><br>
-                    <label for="nest_color">Nest Color</label>
-                    <input type="color" id="nest_color" name="nest_color"><br>
                     <table>
+                        <tr>
+                            <td colspan="2">
+                                <label for="name">Species:</label>
+                                <input type="text" id="name" value="name">
+                            </td>
+                            <td>
+                                <input type="checkbox" id="dominant" name="dominant" value="dominant" checked>
+                                <label for="dominant">Dominant</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="namespace">Namespace</label>
+                                <input type="text" id="namespace" name="namespace"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="color">Color:</label>
+                                <input type="color" id="color" name="color" onchange="syncColor()"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="nest_color">Nest Color</label>
+                                <input type="color" id="nest_color" name="nest_color"><br>
+                            </td>
+                        </tr>
                         <tr>
                             <td>
                                 <label for="temp">Temperature:</label>
@@ -195,6 +217,12 @@
                 <label>
                     Output:<br>
                     <textarea id="output" rows="50" cols="70"></textarea>
+                </label>
+            </td>
+            <td>
+                <label>
+                    Lang:<br>
+                    <textarea id="lang_output" rows="50" cols="70"></textarea>
                 </label>
             </td>
         </tr>
