@@ -9,6 +9,8 @@ function generateJson() {
         default_chromosome: {
         }
     }
+    object.color = object.color.slice(1)
+    object.nest_color = object.nest_color.slice(1)
     object.default_chromosome['complicated_bees:lifespan'] = {
         data: form['lifespan'].value,
         dominant: form['life_dom'].checked
