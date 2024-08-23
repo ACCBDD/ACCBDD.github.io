@@ -31,7 +31,7 @@ function generateJson() {
     }
     if (form.fertility.value == "") form.fertility.value = 2
     object.default_chromosome['complicated_bees:fertility'] = {
-        data: form['fertility'].value,
+        data: form['fertility'].valueAsNumber,
         dominant: form['fertile_dom'].checked
     }
     if (form.flower.value != "") {
