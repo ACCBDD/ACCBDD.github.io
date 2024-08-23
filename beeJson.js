@@ -2,6 +2,7 @@ function generateJson() {
     form = document.forms["bee_form"]
     const object = {
         dominant: form["dominant"].checked,
+        foil: form["foil"].checked,
         color: form["color"].value,
         nest_color: form["nest_color"].value,
         products: [],
