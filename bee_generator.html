@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <title>Bee Generator</title>
+    <style>
+
+    </style>
 </head>
 <body>
     <table style="padding:10px">
@@ -20,13 +23,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td colspan="3">
                                 <label for="namespace">Namespace</label>
                                 <input type="text" id="namespace" name="namespace"><br>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2">
+                            <td colspan="3">
                                 <input type="checkbox" id="foil" name="foil" value="foil">
                                 <label for="foil">Foil</label><br>
                             </td>
@@ -35,6 +38,9 @@
                             <td>
                                 <label for="color">Color:</label>
                                 <input type="color" id="color" name="color" onchange="syncColor()"><br>
+                            </td>
+                            <td colspan="2" rowspan="2">
+                                <img id="bee_preview" src="bee_preview.png" style="margin:0px;padding:0px;background-color:black" alt="bee preview">
                             </td>
                         </tr>
                         <tr>
@@ -215,7 +221,6 @@
                         </tr>
                     </table>
                     <br>
-                    <br>
                 </form>
                 <button onclick="generateJson()">Generate</button>
             </td>
@@ -228,7 +233,7 @@
             <td>
                 <label>
                     Lang:<br>
-                    <textarea id="lang_output" rows="50" cols="70" spellcheck="false"></textarea>
+                    <textarea id="lang_output" rows="50" cols="100" spellcheck="false"></textarea>
                 </label>
             </td>
         </tr>
