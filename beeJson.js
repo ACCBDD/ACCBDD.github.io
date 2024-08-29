@@ -77,6 +77,7 @@ function generateJson() {
 
 function syncColor() {
     document.getElementById('nest_color').value = document.getElementById('color').value
+    document.getElementById('bee_preview').style.backgroundColor = document.getElementById('color').value
 }
 
 function capitalize(string) {
