@@ -191,12 +191,20 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="checkbox" id="nocturnal" name="nocturnal" value="nocturnal">
-                                <label for="nocturnal">Nocturnal</label><br>
+                                <label for="active_time">Active Time:</label>
+                                <select id="active_time" name="active_time">
+                                    <option value="diurnal">diurnal</option>
+                                    <option value="nocturnal">nocturnal</option>
+                                    <option value="matutinal">matutinal</option>
+                                    <option value="vespertine">vespertine</option>
+                                    <option value="crepuscular">crepuscular</option>
+                                    <option value="cathemeral">cathemeral</option>
+                                    <option value="never_sleeps">never sleeps</option>
+                                </select><br>
                             </td>
                             <td>
-                                <input type="checkbox" id="nocturnal_dom" name="nocturnal_dom" value="nocturnal_dom" checked>
-                                <label for="nocturnal_dom">Dominant</label><br>
+                                <input type="checkbox" id="active_time_dom" name="active_time_dom" value="active_time_dom" checked>
+                                <label for="active_time_dom">Dominant</label><br>
                             </td>
                         </tr>
                         <tr>

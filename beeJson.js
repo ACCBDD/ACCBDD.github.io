@@ -47,9 +47,9 @@ function generateJson() {
             dominant: form['effect_dom'].checked
         }
     }
-    object.default_chromosome['complicated_bees:nocturnal'] = {
-        data: form['nocturnal'].checked,
-        dominant: form['nocturnal_dom'].checked
+    object.default_chromosome['complicated_bees:active_time'] = {
+        data: form['active_time'].value,
+        dominant: form['active_time_dom'].checked
     }
     object.default_chromosome['complicated_bees:cave_dwelling'] = {
         data: form['cave_dwelling'].checked,
