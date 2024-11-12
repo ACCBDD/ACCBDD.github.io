@@ -52,7 +52,22 @@ function generateJson() {
     lang['seed.agricraft.' + namespace + '.' + speciesName] = capitalize(speciesName) + " Seeds"
     lang['description.agricraft.' + namespace + '.' + speciesName] = ""
     document.getElementById('lang_output').value = JSON.stringify(lang, null, 2)
+    modelData = {
+        parent: "agricraft:crop/crop_hash",
+        textures: {
+            crop: "enchanted:block/water_artichoke_stage_0"
+        }
+    }
 
+    for (i = 0; i < plant_json.stages.length; i++) {
+        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(modelData, null, 2));
+        var downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href",     dataStr);
+        downloadAnchorNode.setAttribute("download", speciesName + "_stage"+i+".json");
+        document.body.appendChild(downloadAnchorNode); // required for firefox
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+    }
 }
 
 function capitalize(string) {
