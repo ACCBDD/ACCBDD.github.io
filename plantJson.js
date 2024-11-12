@@ -3,42 +3,42 @@ function generateJson() {
     console.log("{'array':" + form["stages"].value + "}")
     const plant_json = {
         cloneable: form["cloneable"].checked,
-        growth_bonus: form["growth_bonus"].value,
-        growth_chance: form["growth_chance"].value,
-        harvest_stage: form["harvest_stage"].value,
+        growth_bonus: Number(form["growth_bonus"].value),
+        growth_chance: Number(form["growth_chance"].value),
+        harvest_stage: Number(form["harvest_stage"].value),
         mods: [],
         products: [
             {
-                chance: form["prod_chance"].value,
+                chance: Number(form["prod_chance"].value),
                 item: form["prod_item"].value,
-                max: form["prod_max"].value,
-                min: form["prod_min"].value,
+                max: Number(form["prod_max"].value),
+                min: Number(form["prod_min"].value),
                 required: true
             }
         ],
         requirement: {
-            light_tolerance_factor: form["light_tol"].value,
-            max_light: form["max_light"].value,
-            min_light: form["min_light"].value,
+            light_tolerance_factor: Number(form["light_tol"].value),
+            max_light: Number(form["max_light"].value),
+            min_light: Number(form["min_light"].value),
             seasons: ["summer", "autumn"],
             soil_acidity: {
                 type: form["acid_type"].value,
-                tolerance_factor: form["acid_tol"].value,
+                tolerance_factor: Number(form["acid_tol"].value),
                 value: form["acid_val"].value
             },
             soil_humidity: {
                 type: form["humid_type"].value,
-                tolerance_factor: form["humid_tol"].value,
+                tolerance_factor: Number(form["humid_tol"].value),
                 value: form["humid_val"].value
             },
             soil_nutrients: {
                 type: form["nutrient_type"].value,
-                tolerance_factor: form["nutrient_tol"].value,
+                tolerance_factor: Number(form["nutrient_tol"].value),
                 value: form["nutrient_val"].value
             }
         },
         seeds: [],
-        spread_chance: form["spread_chance"],
+        spread_chance: Number(form["spread_chance"]),
         stages: JSON.parse('{"array":' + form["stages"].value + "}").array
     }
     console.log(JSON.stringify(plant_json))
@@ -49,7 +49,7 @@ function generateJson() {
     if (namespace == "") namespace = "complicated_bees"
     lang = {}
     lang['plant.agricraft.' + namespace + '.' + speciesName] = capitalize(speciesName)
-    lang['seed.agricraft.' + namespace + '.' + speciesName] = ""
+    lang['seed.agricraft.' + namespace + '.' + speciesName] = capitalize(speciesName) + " Seeds"
     lang['description.agricraft.' + namespace + '.' + speciesName] = ""
     document.getElementById('lang_output').value = JSON.stringify(lang, null, 2)
 
