@@ -38,7 +38,7 @@ function generateJson() {
             }
         },
         seeds: [],
-        spread_chance: Number(form["spread_chance"]),
+        spread_chance: Number(form["spread_chance"].value),
         stages: JSON.parse('{"array":' + form["stages"].value + "}").array
     }
     console.log(JSON.stringify(plant_json))
