@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plant Generator</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <table style="padding:10px">
+        <tr>
+            <td style="vertical-align:top" rowspan="2">
+                <form name="bee_form" id="bee_form" spellcheck="false">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="name">ID:</label>
+                                <input type="text" id="name" value="wheat">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="namespace">Namespace</label>
+                                <input type="text" id="namespace" name="namespace" value="minecraft"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="cloneable" name="cloneable" value="cloneable" checked>
+                                <label for="cloneable">Cloneable</label><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="growth_bonus">Growth Bonus</label>
+                                <input type="number" id="growth_bonus" name="growth_bonus" min="0" value="0.025" step="0.005"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="growth_chance">Growth Chance</label>
+                                <input type="number" id="growth_chance" name="growth_chance" min="0" value="0.75" step="0.05"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="harvest_stage">Harvest Stage</label>
+                                <input type="number" id="harvest_stage" name="harvest_stage" min="0" value="4" step="1"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="light_tol">Light Tolerance Factor</label>
+                                <input type="number" id="light_tol" name="light_tol" min="0" value="0.5" step="0.05"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="max_light">Max Light Level</label>
+                                <input type="number" id="max_light" name="max_light" min="0" max="16" value="16" step="1"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="min_light">Min Light Level</label>
+                                <input type="number" id="min_light" name="min_light" min="0" max="16" value="10" step="1"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr>
+                                <label for="prod_chance">Product Chance</label>
+                                <input type="number" id="prod_chance" name="prod_chance" min="0" max="1" value="0.95" step="0.05"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="prod_item">Product ID</label>
+                                <input type="text" id="prod_item" name="prod_item" value="minecraft:wheat"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="prod_max">Max</label>
+                                <input type="number" id="prod_max" name="prod_max" min="0" max="10" value="3" step="1"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="prod_min">Min</label>
+                                <input type="number" id="prod_min" name="prod_min" min="0" max="10" value="1" step="1"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr>
+                                <label for="acid_type">Acidity Tolerance Type</label>
+                                <select id="acid_type" name="acid_type">
+                                    <option value="equal">Equal</option>
+                                    <option value="equal_or_lower">Equal or Lower</option>
+                                    <option value="equal_or_higher">Equal or Higher</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="acid_tol">Factor</label>
+                                <input type="number" id="acid_tol" name="acid_tol" min="0" max="2" value="0.2" step="0.05"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="acid_val">Acidity Value</label>
+                                <select id="acid_val" name="acid_val">
+                                    <option value="highly_acidic">Highly Acidic</option>
+                                    <option value="acidic">Acidic</option>
+                                    <option selected="selected" value="slightly_acidic">Slightly Acidic</option>
+                                    <option value="neutral">Neutral</option>
+                                    <option value="slightly_alkaline">Slightly Alkaline</option>
+                                    <option value="alkaline">Alkaline</option>
+                                    <option value="highly_alkaline">Highly Alkaline</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr>
+                                <label for="humid_type">Humidity Tolerance Type</label>
+                                <select id="humid_type" name="humid_type">
+                                    <option value="equal">Equal</option>
+                                    <option value="equal_or_lower">Equal or Lower</option>
+                                    <option value="equal_or_higher">Equal or Higher</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="humid_tol">Factor</label>
+                                <input type="number" id="humid_tol" name="humid_tol" min="0" max="2" value="0.15" step="0.05"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="humid_val">Humidity Value</label>
+                                <select id="humid_val" name="humid_val">
+                                    <option value="arid">Arid</option>
+                                    <option value="dry">Dry</option>
+                                    <option value="damp">Damp</option>
+                                    <option selected="selected" value="wet">Wet</option>
+                                    <option value="watery">Watery</option>
+                                    <option value="flooded">Flooded</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr>
+                                <label for="nutrient_type">Nutrient Tolerance Type</label>
+                                <select id="nutrient_type" name="nutrient_type">
+                                    <option value="equal">Equal</option>
+                                    <option value="equal_or_lower">Equal or Lower</option>
+                                    <option value="equal_or_higher">Equal or Higher</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="nutrient_tol">Factor</label>
+                                <input type="number" id="nutrient_tol" name="nutrient_tol" min="0" max="2" value="0.15" step="0.05"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="nutrient_val">Nutrient Value</label>
+                                <select id="nutrient_val" name="nutrient_val">
+                                    <option value="none">None</option>
+                                    <option value="very_low">Very Low</option>
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option selected="selected" value="high">High</option>
+                                    <option value="very_high">Very High</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr>
+                                <label for="spread_chance">Spread Chance</label>
+                                <input type="number" id="spread_chance" name="spread_chance" min="0" max="1" value="0.1" step="0.05"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="stages">Stages (as an array)</label>
+                                <input type="text" id="stages" name="stages" value="[2, 4, 6, 8, 10, 12, 14, 16]"><br>
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                </form>
+                <button onclick="generateJson()">Generate</button>
+            </td>
+            <td>
+                <label>
+                    Output:<br>
+                    <textarea id="output" rows="30" cols="70" spellcheck="false"></textarea>
+                </label>
+            </td>
+            <td>
+                <label>
+                    Lang:<br>
+                    <textarea id="lang_output" rows="30" cols="100" spellcheck="false"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    Model Output:<br>
+                    <textarea id="model_output" rows="20" cols="70" spellcheck="false"></textarea>
+                </label>
+            </td>
+        </tr>
+    </table>
+    <script src="plantJson.js">
+    </script>
+</body>
+</html>
