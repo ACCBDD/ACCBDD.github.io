@@ -52,22 +52,42 @@ function generateJson() {
     lang['seed.agricraft.' + namespace + '.' + speciesName] = capitalize(speciesName) + " Seeds"
     lang['description.agricraft.' + namespace + '.' + speciesName] = ""
     document.getElementById('lang_output').value = JSON.stringify(lang, null, 2)
-    modelData = {
-        parent: "agricraft:crop/crop_hash",
-        textures: {
-            crop: "enchanted:block/water_artichoke_stage_0"
+
+
+    var zip = new JSZip();
+    var modelsFolder = zip.folder(namespace).folder("models")
+    var cropFolder = modelsFolder.folder("crop")
+    var seedFolder = modelsFolder.folder("seed")
+
+    //generate models
+    for (i = 0; i < plant_json.stages.length; i++) {
+        modelData = {
+            parent: form["crop_model"].value,
+            textures: {
+                crop: form["crop_texture"].value + i
+            }
+        }
+        cropFolder.file(speciesName + "_stage"+i+".json", JSON.stringify(modelData, null, 2))
+    }
+    seedData = {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": form["seed_texture"].value
         }
     }
+    seedFolder.file(speciesName+".json", JSON.stringify(seedData, null, 2))
 
-    for (i = 0; i < plant_json.stages.length; i++) {
-        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(modelData, null, 2));
+    zip.generateAsync({type:"base64"})
+    .then(function (base64) {
+        var dataStr = "data:application/zip;base64," + base64;
         var downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href",     dataStr);
-        downloadAnchorNode.setAttribute("download", speciesName + "_stage"+i+".json");
+        downloadAnchorNode.setAttribute("download", speciesName + ".zip");
         document.body.appendChild(downloadAnchorNode); // required for firefox
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
-    }
+    });
+
 }
 
 function capitalize(string) {

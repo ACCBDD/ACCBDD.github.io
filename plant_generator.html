@@ -195,6 +195,31 @@
                                 <input type="text" id="stages" name="stages" value="[2, 4, 6, 8, 10, 12, 14, 16]"><br>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <hr>
+                                <label for="crop_model">Crop Model</label>
+                                <select id="crop_model" name="crop_model">
+                                    <option value="agricraft:crop/crop_hash" selected>Crop Hash</option>
+                                    <option value="agricraft:crop/crop_cross">Crop Cross</option>
+                                    <option value="agricraft:crop/crop_plus">Crop Plus</option>
+                                    <option value="agricraft:crop/crop_gourd">Crop Gourd</option>
+                                    <option value="agricraft:crop/crop_rhombus">Crop Rhombus</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="crop_texture">Crop Texture Prefix</label>
+                                <input type="text" id="crop_texture" name="crop_texture" value="minecraft:block/wheat_stage"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="seed_texture">Seed Texture</label>
+                                <input type="text" id="seed_texture" name="seed_texture" value="minecraft:item/wheat_seeds"><br>
+                            </td>
+                        </tr>
                     </table>
                     <br>
                 </form>
@@ -213,16 +238,8 @@
                 </label>
             </td>
         </tr>
-        <tr>
-            <td>
-                <label>
-                    Model Output:<br>
-                    <textarea id="model_output" rows="20" cols="70" spellcheck="false"></textarea>
-                </label>
-            </td>
-        </tr>
     </table>
-    <script src="plantJson.js">
-    </script>
+    <script src="plantJson.js"></script>
+    <script src="jszip.min.js"></script>
 </body>
 </html>
